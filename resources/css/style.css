@@ -1,3 +1,14 @@
+/* orange color 
+
+#e67e22
+*/
+
+/*---------------------------------------------*/
+/*BASIC SETUP*/
+/*---------------------------------------------*/
+
+
+
 *{
     
 margin:0;
@@ -16,6 +27,9 @@ font-size:20px;
 text-rendering:optimizeLegibility;
 }
 
+/*---------------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/*---------------------------------------------*/
 
 .row  {
  max-width:1140px; 
@@ -25,19 +39,7 @@ text-rendering:optimizeLegibility;
 }
 
 
-
-
-
-header{
-   
-background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(img/hero.jpg);
-height:100vh;
-background-size:cover;
-background-position:center;
-
-  
-}
-
+/*------BUTTONS------*/
 h1{
     margin-top:0;
     margin-bottom:20px;
@@ -47,7 +49,7 @@ h1{
     text-transform:uppercase;
     letter-spacing:1px;
     word-spacing:4px;
-
+/*------BUTTONS------*/
 
 }
 .btn:link,
@@ -97,13 +99,21 @@ color:#e67e22;
   color:#fff;
 }
 
+/*---------------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/*---------------------------------------------*/
 
-.hero-text-box {
-    
+header{
+   
+background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(img/hero.jpg);
+height:100vh;
+background-size:cover;
+background-position:center;
 
+  
+}
 
-    
-    
+.hero-text-box {   
 position: absolute;
 width:1140px;
 top:50%;
@@ -111,4 +121,44 @@ left:50%;
 transform:translate(-50%,-50%);
     
 }
+.logo{
+    
+height:100px;
+width:auto;
+float:left;
+    
+    
+}
+.main-nav{
+    
+float:right;
+list-style:none;
+margin-top:55px;
 
+}
+
+.main-nav li{  
+  display:inline-block;
+  margin-left:40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited
+{
+color:#fff;
+text-decoration:none;
+text-transform:uppercase;
+font-size:90%;
+border-bottom:2px solid transparent;
+transition: border-bottom: 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active
+{
+border-bottom: 2px solid #e67e22;
+    
+    
+    
+    
+}

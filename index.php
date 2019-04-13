@@ -1,7 +1,9 @@
 <!DOCTYPE html >
 <html lang="en">
    <head>
-    
+    <?php     
+      require_once("NewsFeedBackend.php");   
+    ?>
     
     
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
@@ -23,8 +25,8 @@
    <header>
        <nav>
        <div class="row">
-       <img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo"> 
-         <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">
+        <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
+        <!-- <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">-->
            <ul class="main-nav">
             <li><a href='#'>Home</a></li>
             <li><a href='#'>About Us </a></li>
@@ -47,38 +49,37 @@
    
     <div>
        
-          <h2>Get food fast &mdash; not fast food.</h2>
-          <p class="long-copy">
-          Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
-          </p>
-    
-       
+        <h2>News Feed </h2>
        
        </div>
                        <div class="row">
                         <div class= "col span-1-of-4 box">
-                                <ion-icon class="icon-big" name="infinite"></ion-icon>
-                                <h3>Up to 365 days/year</h3>
+                            <?php echo " <img src ='".$images[0]."' width='100%' height='200px'>"; ?>
+                                <!--<ion-icon class="icon-big" name="infinite"></ion-icon>-->
+                                <h3><?php echo $titles[0]?></h3>
                                         <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.</p>
                     
                         </div>
                         <div class= "col span-1-of-4 box">
-                                <ion-icon class="icon-big" name="stopwatch"></ion-icon>
-                                <h3>Ready in 20 minutes</h3>
+                             <?php echo " <img src ='".$images[1]."' width='100%' height='200px'>"; ?>
+                               <!-- <ion-icon class="icon-big" name="stopwatch"></ion-icon>-->
+                                <h3><?php echo $titles[1]?></h3>
                     
                                         <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
                     
                         </div>
                          <div class= "col span-1-of-4 box">
-                                <ion-icon class="icon-big" name="nutrition"></ion-icon>
-                                <h3>100% organic</h3>
+                              <?php echo " <img src ='".$images[2]."' width='100%' height='200px'>"; ?>
+                                <!--<ion-icon class="icon-big" name="nutrition"></ion-icon>-->
+                                <h3><?php echo $titles[2]?></h3>
                     
                                         <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!</p>
                     
                         </div>
                          <div class= "col span-1-of-4 box">
-                                <ion-icon class="icon-big" name="cart"></ion-icon>
-                                <h3>Order anything</h3>
+                              <?php echo " <img src ='".$images[3]."' width='100%' height='200px'>"; ?>
+                                <!--<ion-icon class="icon-big" name="cart"></ion-icon>-->
+                                <h3><?php echo $titles[3]?></h3>
                     
                                         <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!
                                         </p>
@@ -98,28 +99,28 @@
          <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/1.jpg" alt="Korean bibimbap with egg and vegetables">
+               <img src="resources/img/ftp1.jpg" alt="Korean bibimbap with egg and vegetables">
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/2.jpg" alt="Simple italian pizza with cherry tomatoes">
+               <img src="resources/img/ftp2.jpg" alt="Simple italian pizza with cherry tomatoes">
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/3.jpg" alt="Chicken breast steak with vegetables">
+               <img src="resources/img/ftp3.jpg" alt="Chicken breast steak with vegetables">
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/4.jpg" alt=" Autumn pumpkin soup">
+               <img src="resources/img/ftp4.jpg" alt=" Autumn pumpkin soup">
         
            </figure>
         </li>
@@ -128,39 +129,115 @@
        <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/5.jpg" alt="Paleo beef steak with vegetables">
+               <img src="resources/img/ftp5.jpg" alt="Paleo beef steak with vegetables">
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/6.jpg" alt="Healthy baguette with egg and vegetables">
+               <img src="resources/img/ftp6.jpg" alt="Healthy baguette with egg and vegetables">
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/7.jpg" alt="Chicken breast steak with vegetables">
+               <img src="resources/img/ftp7.jpg" alt="Chicken breast steak with vegetables">
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo  ">
         
-               <img src="resources/img/8.jpg" alt="Granola with cherries and strawberries">
+               <img src="resources/img/ftp8.jpg" alt="Granola with cherries and strawberries">
         
            </figure>
         </li>
      </ul> 
 </section>
+     
+   
+  <footer class='thisfooter'>        
+      
+        <div class="row">
+        
+        
+      <div class="col span-1-of-2">
+           <!--this creates an unordered list inside of my navigation bar-->
+            <ul class='footer-nav'>
+                <!-- these are the list items aka the navigation butons 
+                <!-- navigation buttons are links -->
+
+                <li><a href="index.php">Home</a></li> 
+                <li><a href="insert.php">Insert</a></li>
+                <li><a href="update.php">Update</a></li>
+                <li><a href="delete.php">Delete</a></li>                                                                                                          
+
+
+
+            </ul>
+          
+        </div>
+            <div class="col span-1-of-2">
+                <ul class="footer-links icons" >
+                    
+                    
+            <li><a class='facebook' href="#"><ion-icon class='icons1' name="logo-facebook"></ion-icon></a></li>
+            <li><a class='linkedin' href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a class='twitter' href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a  class='github' href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+             
+                    
+                    
+           </ul>
+           </div>
+           </div>
+            
+            
+            
+            <div class="row">
+            <p class='footerp'>
+                
+            Copyright &copy; 2019 by Steve Bien-Aime . All rights reserved.     
+            
+            </p>
+            </div>
+            
+           
+        </footer>              
+          
+            
+           
+      
+           
+        
+
+  
+    
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
     
     
 
     
 </body>
-    
+     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="vendors/js/jquery.waypoints.min.js"></script>       
     <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>   

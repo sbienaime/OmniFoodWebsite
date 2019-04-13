@@ -22,19 +22,12 @@ $(document).ready (function(){
         
         $('nav').addClass('sticky');
         
-        
       }                            
                                          
     else{
-        
-        
         $('nav').removeClass('sticky');
         
-    }
-        
-        
-        
-        
+    }    
         
     }, {
   offset: '60px;'

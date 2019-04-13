@@ -52,13 +52,13 @@
     <div  class=' profilesContainer' >
         
         <div class='PresidentProfile'> 
+             
+                 <img src='resources/img/headshots.jpg' width='189' height='200'> 
             
-            <img src='resources/img/headshots.jpg' width='189' height='200'>
+                 <h4> Title</h4>
+                 <p> description description description description <p> 
+        
             
-            <h4> Title</h4>
-            <p> description description description description <p> 
-        
-        
         
         
         

@@ -566,7 +566,8 @@ height:15%;
  float:right;
  list-style: none;  
 }
-.subpage-nav li{  
+.subpage-nav li{ 
+
 display:inline-block;
 margin-left:10px;
 margin-top:2%;
@@ -574,7 +575,7 @@ margin-bottom:2%;
 }
 
 .subpage-nav li a {
-   
+  
 text-decoration: none;
  color:#fff; 
    
@@ -592,11 +593,9 @@ text-decoration: none;
 }
 
 
-.PresidentProfile ul {
+.PresidentProfile  {
 display:inline-block;
 float:left;
- 
-    
-    
-    
+list-style:none;
+     
 }

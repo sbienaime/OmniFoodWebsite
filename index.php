@@ -18,18 +18,18 @@
    
        
        <!--font-family: 'Lato', sans-serif;-->
-    <title>  Omnifood  </title>
+    <title>  Technology Club </title>
     </head> 
  <body>
     
-   <header>
+   <header class='headerFrontPage'>
        <nav>
        <div class="row">
         <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
         <!-- <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">-->
            <ul class="main-nav">
-            <li><a href='#'>Home</a></li>
-            <li><a href='#'>About Us </a></li>
+            <li><a href='index.php'>Home</a></li>
+            <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='#'>Projects </a> </li>
             <li><a href='#'>Contact Us </a></li>
             <li><a href='#'>Sign up</a></li>

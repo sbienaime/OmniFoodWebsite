@@ -367,6 +367,7 @@ color:rgba(150,240,90,0.96);
       margin-bottom:0;
     
        margin-right:0;
+       
       
        padding-bottom:0;
        
@@ -554,30 +555,42 @@ table{
 
 /*About us page elements  */
 .subpage-nav{
-margin-left:auto;
-margin-right:auto;
-background-color:rgba(130,130,130,1);   
+padding:0;
+padding-left:0;
+margin-left:0;
+
+background-color:rgba(130,130,130,0.9);   
 width:100%;
-height:15%;
+padding-top:15px;
+padding-bottom:15px;
     
  }
+ .subpageheader{
+    
+  margin-left:0;
+  padding-left:0;
+     
+ }
 .subpage-navlist{
- 
- float:right;
- list-style: none;  
+float:right;
+padding-left:0;
+margin-left:0;
+list-style: none;  
 }
 .subpage-nav li{ 
+    
 
+margin-left:20px;
 display:inline-block;
-margin-left:10px;
+
 margin-top:2%;
-margin-bottom:2%;
+margin-bottom:1%;
 }
 
 .subpage-nav li a {
   
 text-decoration: none;
- color:#fff; 
+ color:#000000; 
    
 }
 
@@ -586,16 +599,129 @@ text-decoration: none;
 .profilesContainer{
   margin-left:auto;
   margin-right:auto;  
-  width:80%;
-  height:100vh;
-  background-color:rgba(180,180,180,0.75);  
-      
+  width:100%;
+  background-color:rgba(0,0,0,0.3);       
 }
 
 
-.PresidentProfile  {
-display:inline-block;
-float:left;
-list-style:none;
-     
+.PresidentProfile {
+    
+
+ max-height:25%;
+ color:#fff;
+ padding-top:2%;
+ width:100%;
+ padding-bottom:5%;
+}
+.regMembersSection h3{
+margin-top: 10%;
+ text-align:center;   
+    
+}
+.memberProfiles{
+
+margin-top: 5%;
+
+margin-bottom:5%;
+width:100%;
+
+
+float:none;
+margin-right:10%;
+margin-left:10%;
+padding-right:0;
+padding-left:0;
+
+ 
+    
+    
+}
+.memberProfiles div{
+ display:inline-block;
+    
+  width:20%;
+  height:20vh;     
+}
+.profilesContainer h2{
+padding-left:25%;
+padding-right:25%;
+color:#fff;
+ 
+ 
+ padding-top:4%;
+ text-align: center;
+
+ margin-bottom:0;
+ padding-bottom:0;   
+}
+.presTitle, .presImg
+ {
+
+                              
+ display:inline-block; 
+ width:20%;
+ height:25%;   
+}
+
+.presImg img{
+ border-radius:5px;   
+    
+}
+.presDesc p {
+ text-align:left; 
+ font-weight:bold;
+    
+    
+    
+}
+.presDesc{
+width:40%;       
+display:inline-block;        
+}
+
+
+.profileSection{
+background-image:linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)),url(img/vr3.png);  
+background-size:cover;
+background-size: 50%;
+background-repeat:no-repeat;
+ padding:0;
+  margin:0; 
+background-attachment: fixed;
+background-position:center;
+
+
+    
+}
+.presTitle h4{  
+text-align:center;
+}
+
+.regMembersSection{
+    
+ height:100vh;  
+ margin:0;
+ padding:0;
+   
+}
+
+
+
+
+/* Resources page */
+
+
+.ResourceSection{
+    
+    
+background-image:linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)),url(img/star.png);  
+background-size:cover;
+background-attachment: fixed;
+background-position:center;
+background-repeat: no-repeat;
+padding:0;
+margin:0;
+background-size: 100%;
+
+    
 }

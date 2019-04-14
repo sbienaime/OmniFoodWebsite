@@ -38,7 +38,7 @@
            <ul   class='subpage-navlist'>
             <li><a   href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
-            <li><a href='Resources.php'>Resources</a></li>
+             <li><a href='Resources.php'>Resources</a></li>
             <li><a href='#'>Contact Us </a></li>
             <li><a href='#'>Registration</a></li>
             <li><a href='#'>Sign In </a></li>
@@ -48,7 +48,7 @@
        
    </header>
     
-<section class='profileSection'>
+<section class='ResourceSection'>
     
     
     
@@ -57,53 +57,50 @@
 <div  class='profilesContainer' >
     <div><h2>OUR GOAL IS TO HELP TECHNOLOGY ENTHUSIASTS EXPLORE THEIR INTERESTS BY WORKING ON REAL WORLD PROJECTS<h2></div>
         <center> <div class='PresidentProfile'>     
-        <div class='presImg'> <img src='resources/img/prt5.jpg' width='60%' height='80%'>
-        <h4> Clint Laborde</h4>
+                <div class='presImg'> <img src='resources/img/youtube.png' width='60%' height='80%'>
+        
         </div>    
-        <div class='presTitle'><h4>President</h4></div>
+        
         <div class='presDesc'>  <p> President Clint has been serving for approximately five years.Under his leadership the club's membership
                 has more than doubled and engagement has grown bigly.
         </p> </div></div></center>  <!-- end of presdiv -->
  
         
         <center><div class='PresidentProfile'>     
-        <div class='presImg'> <img src='resources/img/prt6.jpg' width='60%' height='80%'>
-        <h4>Yehuda Joseph</h4>
+                <div class='presImg'> <img src='resources/img/freecodecamp.png' width='60%' height='80%'>
+        
         </div>    
-        <div class='presTitle'><h4> Vice President </h4></div>
         <div class='presDesc'><p> description description description description <p> </div> 
         </div></center> <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
-        <div class='presImg'> <img src='resources/img/prt7.jpg' width='60%' height='80%'>
-        <h4> Carlos Mencia</h4>
+                <div class='presImg'> <img src='resources/img/udemy.png' width='60%' height='80%'>
         </div>    
-        <div class='presTitle'><h4>Chief Operations Officer</h4></div>
         <div class='presDesc'>  <p> description description description description <p> </div> 
               </div></center>  <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
-        <div class='presImg'> <img src='resources/img/prt8.jpg' width='60%' height='80%'>
+                <div class='presImg'> <img src='resources/img/w3schools.png' width='60%' height='80%'>
         
         
-         <h4>Steve Bien-Aime</h4></div>    
-        <div class='presTitle'><h4>Chief Technology Officer</h4></div>
+         </div>    
+       
         <div class='presDesc'>  <p> description description description description <p> </div> 
             </div></center>  <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
-        <div class='presImg'> <img src='resources/img/prt9.jpg' width='60%' height='80%'>
-         <h4> Alec Baldwin</h4>
+                <div class='presImg'> <img src='resources/img/stackoverflow.png' width='60%' height='80%'>
+        
         </div>    
-        <div class='presTitle'><h4>Secretary</h4></div>
+      
         <div class='presDesc'><p> description description description description <p> </div> 
         </div></center>  <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
-        <div class='presImg'> <img src='resources/img/prt6.jpg' width='60%' height='80%'>
-         <h4> Eriel Garcia</h4>
+                <div class='presImg'> <img src='resources/img/geeksforgeeks.png' width='60%' height='80%'>
+       
         </div>    
-        <div class='presTitle'><h4>Chief Design Officer</h4></div>
+        
         <div class='presDesc'>  <p> description description description description <p> </div> 
             </div></center>  <!-- end of presdiv -->
         
@@ -123,7 +120,7 @@
 </section>
     
     
- <section class='regMembersSection'>
+ <section class='resourceSubfooter'>
       
       <h3>MEMBERS</h3> 
       

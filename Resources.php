@@ -7,7 +7,7 @@
     
     
 <head>   
-<title> Technology Club  
+<title> Technology Club Resources 
 </title>
     
     
@@ -33,15 +33,14 @@
 <header class='subpageheader'>
        <nav class='subpage-nav'>
        <div class='row'>
-        <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
-        <!-- <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">-->
-           <ul   class='subpage-navlist'>
-            <li><a   href='index.php'>Home</a></li>
+        <ul class="subpage-navlist">
+            <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
-             <li><a href='Resources.php'>Resources</a></li>
-            <li><a href='#'>Contact Us </a></li>
-            <li><a href='#'>Registration</a></li>
-            <li><a href='#'>Sign In </a></li>
+            <li><a href='Resources.php'>Resources </a></li>
+            <li><a href='contactus.php'>Contact Us </a></li>
+            <li><a href='Dashboard.php'>Dashboard</a></li>
+            <li><a href='registration.php'>Registration</a></li>
+            <li><a href='signin.php'>Sign In</a></li>
            </ul>  
        </div>
     </nav>
@@ -55,14 +54,19 @@
     
  
 <div  class='profilesContainer' >
-    <div><h2>OUR GOAL IS TO HELP TECHNOLOGY ENTHUSIASTS EXPLORE THEIR INTERESTS BY WORKING ON REAL WORLD PROJECTS<h2></div>
+    <div><h2>POPULAR SITES FOR TUTORIALS</h2></div>
         <center> <div class='PresidentProfile'>     
                 <div class='presImg'> <img src='resources/img/youtube.png' width='60%' height='80%'>
         
         </div>    
         
-        <div class='presDesc'>  <p> President Clint has been serving for approximately five years.Under his leadership the club's membership
-                has more than doubled and engagement has grown bigly.
+        <div class='presDesc'>  <p> Don't sleep on youtube. You may think, its just a site for funny videos or that you can only find
+                DIY  construction projects on there. Despite the tutorials sometimes being outdated , it serves as a valuable resource for developers and
+                other technology ethusiasts. <select name="Learn Php">
+                    <option>Hello World</option>
+                    <option> Hello People</option>
+                </select>
+                
         </p> </div></div></center>  <!-- end of presdiv -->
  
         
@@ -70,7 +74,8 @@
                 <div class='presImg'> <img src='resources/img/freecodecamp.png' width='60%' height='80%'>
         
         </div>    
-        <div class='presDesc'><p> description description description description <p> </div> 
+        <div class='presDesc'><p> Free Code Camp has tonnes of free  high quality material for developer. It's a valuable
+            resource for coders at all levels.<p> </div> 
         </div></center> <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
@@ -122,28 +127,42 @@
     
  <section class='resourceSubfooter'>
       
-      <h3>MEMBERS</h3> 
+      <h3>Other Resources</h3> 
       
       <div class='memberProfiles'>
           
          
       <div>
-          <img src='resources/img/prt1.png' width='100%' height='100%'>
-          <p>John Doe <p>
+          
+          
+             <ul   class='subpage-navlist'>
+            <li> <a href='https://flatuicolors.com/'>flatUIcolors.com</a></li>
+            <li><a href='https://pixabay.com/'>Pixabay.com</a></li>
+            </ul>
+          
       </div>
       
       <div>
-          <img src='resources/img/prt2.jpg' width='100%' height='100%'>
-          <p>John Doe <p>
+    
+             <ul   class='subpage-navlist'>
+            <li> <a href='https://www.android.com/'>Android.com</a></li>
+            <li><a href='https://medium.com/'>Medium.com</a></li>
+            </ul>
       </div>
       
       <div>
-          <img src='resources/img/prt3.jpg' width='100%' height='100%'>
-          <p>John Doe <p>
+        
+             <ul   class='subpage-navlist'>
+            <li> <a href='https://fonts.google.com/'>GoogleFonts</a></li>
+            <li><a href='https://www.udacity.com/'>Udacity.com</a></li>
+            </ul>
       </div>
       <div>
-          <img src='resources/img/prt4.jpg' width='100%' height='100%'>
-          <p>John Doe <p>
+       
+             <ul   class='subpage-navlist'>
+            <li> <a href='https://css-tricks.com/'>CSS TRICKS</a></li>
+            <li><a href='https://www.draw.io/'>Draw.io</a></li>
+            </ul>
       </div>
       </div>         
   </section>     

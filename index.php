@@ -30,9 +30,11 @@
            <ul class="main-nav">
             <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
-            <li><a href='#'>Projects </a> </li>
-            <li><a href='#'>Contact Us </a></li>
-            <li><a href='#'>Sign up</a></li>
+            <li><a href='Resources.php'>Resources </a></li>
+            <li><a href='contactus.php'>Contact Us </a></li>
+            <li><a href='Dashboard.php'>Dashboard</a></li>
+            <li><a href='registration.php'>Registration</a></li>
+            <li><a href='signin.php'>Sign In</a></li>
            </ul>  
        </div>
     </nav>

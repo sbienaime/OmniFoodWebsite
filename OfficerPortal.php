@@ -44,7 +44,7 @@
             <li><a href='contactus.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
             <li><a href='signup.php'>Registration</a></li>
-            <li><a href='signin.php'>Sign In</a></li>
+            <li><a href='login.php'>Sign In</a></li>
            </ul>  
        </div>
      

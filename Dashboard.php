@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html >
 <html lang="en">
 
@@ -6,7 +17,8 @@
     
     
     
-<head>   
+<head>
+    
 <title> Technology Club  
 </title>
     
@@ -30,6 +42,28 @@
     
 <body>
     
+ <?php
+
+ 
+ require_once 'config.php';
+ 
+ $profile_img;
+    
+     
+ $select = 'Select profile_img from users where username ="'.$_SESSION['username'].'";';
+   
+ $result = $conn->query($select);
+               
+ while ($row = $result->fetch_assoc()) {
+        
+ $profile_img=$row['profile_img'];   
+         
+       
+     }
+    ?> 
+   
+ 
+    
 <header class='subpageheader'>
        <nav class='subpage-nav'>
        <div class='row'>
@@ -42,8 +76,8 @@
             <li><a href='contactus.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
             <li><a href='registration.php'>Registration</a></li>
-             <li><a href='OfficerPortal.php'>Officer Portal</a></li>
-            <li><a href='signout.php'>Sign Out</a></li>
+            <li><a href='OfficerPortal.php'>Officer Portal</a></li>
+            <li><a href='logout.php'>Sign Out</a></li>
            </ul> 
        </div>
     </nav>
@@ -54,7 +88,7 @@
 <div  class='DashboardContainer' >
    <h2>PROFILE MANAGER</h2>
         <center> <div class='PresidentProfile'>     
-        <div class='presImg'> <img src='resources/img/prt5.jpg' width='60%' height='80%'>
+        <div class='presImg'> <img src='<?php echo $profile_img ?>' width='60%' height='80%'>
         <h4> Clint Laborde</h4>
         </div>    
         </div></center>  <!-- end of presdiv -->

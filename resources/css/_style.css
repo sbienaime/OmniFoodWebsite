@@ -355,23 +355,46 @@ color:rgba(150,240,90,0.96);
 
 
 
-  
-
-
-   
-   .thisfooter{
+ .loginfooter{
        
-     
+    
+    position:absolute;
+    bottom:0;
+   
     
       width:100%;
       margin-bottom:0;
     
        margin-right:0;
-       
       
        padding-bottom:0;
        
        background-color:#333;
+     
+       
+       
+       
+   }  
+
+
+   
+   .thisfooter{
+       
+    
+    
+   
+    
+      width:100%;
+      margin-bottom:0;
+    
+       margin-right:0;
+      
+       padding-bottom:0;
+       
+       background-color:#333;
+     
+       
+       
        
    }
    
@@ -477,8 +500,10 @@ color:rgba(150,240,90,0.96);
 }
 .twitter ion-icon:hover {
     
-color:#55acee;
-  
+    color:#55acee;
+    
+    
+    
 }
 
 
@@ -499,28 +524,46 @@ padding-bottom:0;
 border:0;
    
 }
-.row p{  
-text-align: center;
-color:#ddd;  
-border-bottom:0;  
-margin-bottom: 0;
-padding-bottom:20px;    
+.row p{
+    
+    text-align: center;
+    color:#ddd;
+    
+  border-bottom:0;  
+ margin-bottom: 0;
+padding-bottom:20PX;    
 }
 
 
 table{
-margin-bottom: 500px;
+   
+    margin-bottom: 500px;
 }
 .submissionsfooter{
- width:100%;
- margin-bottom:0;
- margin-right:0;
- padding-bottom:0;
- background-color:#333;   
+    
+    
+    
+     width:100%;
+      margin-bottom:0;
+    
+       margin-right:0;
+      
+       padding-bottom:0;
+       
+       background-color:#333;
+    
+    
+    
 }
 
-.submissions{  
- height:100vh;   
+
+
+
+.submissions{
+    
+ height:100vh;
+ 
+    
 }
 
 .icons{
@@ -535,43 +578,31 @@ margin-bottom: 500px;
 
 /*About us page elements  */
 .subpage-nav{
-padding:0;
-padding-left:0;
-margin-left:0;
-
-background-color:rgba(130,130,130,0.9);   
+margin-left:auto;
+margin-right:auto;
+background-color:rgba(130,130,130,1);   
 width:100%;
-padding-top:15px;
-padding-bottom:15px;
+height:15%;
     
- }
- .subpageheader{
-    
-  margin-left:0;
-  padding-left:0;
-     
  }
 .subpage-navlist{
-float:right;
-padding-left:0;
-margin-left:0;
-list-style: none;  
+ 
+ float:right;
+ list-style: none;  
 }
 .subpage-nav li{ 
-    
 
-margin-left:20px;
 display:inline-block;
-
+margin-left:10px;
 margin-top:2%;
-margin-bottom:1%;
+margin-bottom:2%;
 }
 
 .subpage-nav li a {
   
 text-decoration: none;
  color:#fff; 
-   text-transform:uppercase;
+   
 }
 
 
@@ -579,136 +610,254 @@ text-decoration: none;
 .profilesContainer{
   margin-left:auto;
   margin-right:auto;  
-  width:100%;
-  background-color:rgba(0,0,0,0.3);       
+  width:80%;
+  height:100vh;
+  background-color:rgba(180,180,180,0.75);  
+      
 }
 
 
-.PresidentProfile {
-    
-
- max-height:25%;
- color:#fff;
- padding-top:2%;
- width:100%;
- padding-bottom:5%;
+.PresidentProfile  {
+display:inline-block;
+float:left;
+list-style:none;
+     
 }
-.regMembersSection h3{
-margin-top: 10%;
- text-align:center;   
-    
+
+/*
+CSS for contact form
+*/
+
+* {
+  box-sizing: border-box;
 }
-.memberProfiles{
 
-margin-top: 5%;
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
 
-margin-bottom:5%;
-width:100%;
+/* Style the email */
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
 
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
 
-float:none;
-margin-right:10%;
-margin-left:10%;
-padding-right:0;
-padding-left:0;
+input[type=submit]:hover {
+  background-color: #45a049;
+}
 
+/* Style the container/contact section */
+.Container {
+  border-radius: 5px;
+  background-color:#ffffff;
+  padding:10px;
+
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
  
-    
-    
-}
-.memberProfiles div{
- display:inline-block;
-    
-  width:20%;
-  height:20vh;     
-}
-.profilesContainer h2{
-padding-left:25%;
-padding-right:25%;
-color:#fff;
- 
- 
- padding-top:4%;
- text-align: center;
+} 
 
- margin-bottom:0;
- padding-bottom:0;   
-}
-.presTitle, .presImg
- {
-
-                              
- display:inline-block; 
- width:20%;
- height:25%;   
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
-.presImg img{
- border-radius:5px;   
+.contactMap{
     
+    margin-top: 20px;
+    margin-bottom: 50px;
+
 }
-.presDesc p {
- text-align:left; 
- font-weight:bold;
-    
-    
-    
-}
-.presDesc{
-width:40%;       
-display:inline-block;        
+.contactText{
+    margin-top: 16px;
+    text-align:center;
+    color:grey;
 }
 
+/*
+ Login and sign up page
+*/
 
-.profileSection{
-background-image:linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)),url(img/vr3.png);  
-background-size:cover;
-background-size: 50%;
-background-repeat:no-repeat;
- padding:0;
-  margin:0; 
-background-attachment: fixed;
-background-position:center;
 
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #fff;
 
     
 }
-.presTitle h4{  
-text-align:center;
+
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+/*
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+
 }
 
-.regMembersSection{
+*/
+
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox h1{
     
- height:100vh;  
- margin:0;
- padding:0;
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+
+.loginbox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.loginbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.loginbox a:hover{
+    color: #ffc107;
+}
+
+.cong{
+    background: rgba(44,62,80,0.7);
+    padding: 40px;
+    height: 200px;
+    margin-left: 180px;
+    margin: 0 auto;
+    margin-top: 120px;
+    width: 290px;
+}
+
+.cong a{
+    color: yellow;
+    font-family: Tahoma, Geneva, sans-serif;
+    margin-left: 30px;
+}
+
+.cong h2{
+    margin-top: 50px;
+    margin-left: 10px;
+}
+.signup{
+    background: rgba(44,62,80,0.7);
+     transform:translate(0,14.5%);
+    padding: 40px;
+    width: 250px;
+    margin: auto;
+    height: 430px;
+    margin-top: 90px;
+    margin-left: 180px;
+    margin: 0 auto;
+}
+.signup form{
    
+    width: 240px;
+    text-align: center;
+}
+.signup input{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
 }
 
-
-
-
-/* Resources page */
-
-
-.ResourceSection{
-    
-    
-background-image:linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)),url(img/star.png);  
-background-size:cover;
-background-attachment: fixed;
-background-position:center;
-background-repeat: no-repeat;
-padding:0;
-margin:0;
-background-size: 100%;
-
-    
+.signup input[type=button]{
+    border: none;
+    outline: none;
+    width: 190px;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
 }
-.DashboardContainer div{
-    
-    color:#000000;
-    
-   
-   
+
+.signup input[type=button]:hover{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
 }
+

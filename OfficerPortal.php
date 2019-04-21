@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if($_SESSION['user_status']!=='yes'){
+    header("location: denied.php");
+    exit;
+}
+?>
+
 <!DOCTYPE HTML> 
 <HTML>
     <HEAD><TITLE>Technology Club Officer Portal</TITLE>
@@ -53,6 +64,35 @@
         
         
         
+     
+        
+        
+        <div class="site_management_div">
+        
+              <H2>  Site Management </H2>
+        
+      <form  action="/action_page.php"  method="POST">
+       Mission Statement:<br>  
+       <input type="text" name="statement"><br>
+       Front Page Image :<br>
+       <input type="text" name="firstname"><br><br>
+       <input type="submit" value="update">        <br> <br>
+       News Feed
+        <br><br>
+        
+        <select name="cars" size="3">
+        <option value="https://techcrunch.com">TECHCRUNCH.COM</option>
+        <option value="https://cnet">CNET.COM</option>
+        <option value="https://wired.com">WIRED.COM</option>
+        </select> 
+         
+          
+          
+          
+          
+      </form>
+          
+     </div>  
         
         
         
@@ -63,41 +103,13 @@
         
         
         
-        
-        
- <p> Below is your current list of favorite songs. You can add to this list by going to the forms page.  </p>
-        
-        <?php
-        require_once('config.php');
-        error_reporting(E_ALL);
-        ini_set('display_errors', 1);
-        $m = "does not exist";
-        $select = 'Select * from favorite_songs;';
-        $result = $conn->query($select);
-        
-        
-        
-        
-        echo "<table border ='2px'>";
-           echo " <tr><th>Username</th><th>Fullname</th><th width='50%'>Messages</th></tr>";
 
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while ($row = $result->fetch_assoc()) {
-
-               
-                echo "<tr ><td>" . $row['author'] . "</td>" . "<td>" . $row["title"] . "</td>" . "<td>" . $row["release_year"] . "</td>" . "<td>" . $row["artist"] . "</td></tr>";
-
-                
-            }
-        } else {
-            echo " Your table is currently empty :( ";
-        }
-
         
-            echo "</table>"   
+      
         
-        ?>
+        
+        
+        
             
     
             
@@ -109,7 +121,7 @@
         <div class="row">
         
         
-      <div class="col span-2-of-1">
+      <div class="col span-1-of-2">
            <!--this creates an unordered list inside of my navigation bar-->
             <ul class="footer-nav">
                 <!-- these are the list items aka the navigation butons 
@@ -125,7 +137,7 @@
             </ul>
           
         </div>
-            <div class="col span-2-of-1">
+            <div class="col span-1-of-2">
                 <ul class="footer-links icons" >
                     
                     

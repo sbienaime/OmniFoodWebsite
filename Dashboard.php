@@ -48,16 +48,23 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
  require_once 'config.php';
  
  $profile_img;
-    
-     
- $select = 'Select profile_img from users where username ="'.$_SESSION['username'].'";';
+ $firstname;
+ $lastname;
    
+ $select = 'Select profile_img from users where username ="'.$_SESSION['username'].'";';
+ $selectname = 'Select first_name, last_name from users where username ="'.$_SESSION['username'].'";';  
  $result = $conn->query($select);
-               
+ $result2 = $conn->query($selectname);           
  while ($row = $result->fetch_assoc()) {
         
  $profile_img=$row['profile_img'];   
-         
+
+     }
+     
+  
+ while ($row2 = $result2->fetch_assoc()) {      
+ $firstname=$row2['first_name'];
+ $lastname=$row2['last_name'];     
        
      }
     ?> 
@@ -89,7 +96,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
    <h2>PROFILE MANAGER</h2>
         <center> <div class='PresidentProfile'>     
         <div class='presImg'> <img src='<?php echo $profile_img ?>' width='60%' height='80%'>
-        <h4> Clint Laborde</h4>
+        <h4><?php echo $firstname.'  '.$lastname;?> </h4>
         </div>    
         </div></center>  <!-- end of presdiv -->
  

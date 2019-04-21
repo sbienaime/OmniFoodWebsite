@@ -2,7 +2,7 @@
 <?php
 // Initialize the session
 session_start();
- 
+$status;
 // Check if the user is already logged in, if yes then redirect him to welcome page
 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
@@ -119,10 +119,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Password is correct, so start a new session
                             session_start();
                             
+                              
+                              
+                              
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
+                            $_SESSION["username"] = $username; 
+                            
+                            
+                            $select = 'Select officership_status from users where username ="'.$_SESSION['username'].'";'; 
+                            $result = $conn->query($select);
+                            
+                             while ($row = $result->fetch_assoc()) {
+                              
+                             $status=$row['officership_status'];   }
+                             
+                             $_SESSION['user_status']=$status;
                             
                             // Redirect user to welcome page
                             header("location: index.php");
@@ -229,7 +242,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
         <!-- <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">-->
            <ul   class='subpage-navlist'>
-            <li><a   href='index.php'>Home</a></li>
+            <li><a   href='index.php'><?php echo $_SESSION['user_status']?></a></li>
             <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='Resources.php'>Resources</a></li>
             <li><a href='contactus.php'>Contact Us </a></li>

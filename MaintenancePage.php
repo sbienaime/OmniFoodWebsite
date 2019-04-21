@@ -66,9 +66,10 @@ echo "The mission Statement was successfully updated";
 
 if(isset($_POST["submit_picture"])) {
 require_once 'config.php';
-$target_dir = "C:/xampp/htdocs/WebAppsProj/resources/css/img/";
+//$target_dir = "C:/xampp/htdocs/WebAppsProj/uploads/";
+$target_dir ="uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$newfilename= "C:/xampp/htdocs/WebAppsProj/resources/css/img/vr2.jpg" ;
+//$newfilename= "C:/xampp/htdocs/WebAppsProj/resources/css/img/vr2.jpg" ;
 
 
 $uploadOk = 1;
@@ -88,9 +89,9 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 // Check if file already exists
 if (file_exists($target_file)) {
-    rename_win($target_file,$newfilename);
-    echo "Sorry, file already exists.";
-    $uploadOk = 1;
+    //rename_win($target_file,$newfilename);
+    echo "The file already exists, no need to upload it. ";
+    //$uploadOk = 0;
 }
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000) {
@@ -117,7 +118,7 @@ if ($uploadOk == 0) {
       
      $conn->close();
        
-      echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+      echo "The site has been updated.";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }

@@ -1,3 +1,31 @@
+<?php
+
+require_once('config.php');
+
+
+
+ $select = 'Select main_text from page_elements where page_id = "2";';
+$result=$conn->query($select);
+  
+  
+while ($row = $result->fetch_assoc()) {
+        
+$our_mission=$row['main_text'];   
+
+     }
+  
+  $conn->close();
+  
+  
+  
+
+
+
+
+?> 
+
+
+
 <!DOCTYPE html >
 <html lang="en">
 
@@ -56,7 +84,9 @@
     
  
 <div  class='profilesContainer' >
-    <div><h2>OUR GOAL IS TO HELP TECHNOLOGY ENTHUSIASTS EXPLORE THEIR INTERESTS BY WORKING ON REAL WORLD PROJECTS<h2></div>
+    <!--<div><h2>OUR GOAL IS TO HELP TECHNOLOGY ENTHUSIASTS EXPLORE THEIR INTERESTS BY WORKING ON REAL WORLD PROJECTS<h2></div>-->
+    
+    <div><h2><?php echo $our_mission; ?> </h2></div>
         <center> <div class='PresidentProfile'>     
         <div class='presImg'> <img src='resources/img/prt5.jpg' width='60%' height='80%'>
         <h4> Clint Laborde</h4>
@@ -76,7 +106,7 @@
         </div></center> <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
-        <div class='presImg'> <img src='resources/img/prt7.jpg' width='60%' height='80%'>
+        <div class='presImg'> <img src='<?php echo $background_img; ?>' width='60%' height='80%'>
         <h4> Carlos Mencia</h4>
         </div>    
         <div class='presTitle'><h4>Chief Operations Officer</h4></div>

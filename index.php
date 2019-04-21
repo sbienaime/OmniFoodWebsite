@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     
-       
+    <link rel="stylesheet" type="text/css" href="resources/css/style.php" />   
    
        
        <!--font-family: 'Lato', sans-serif;-->

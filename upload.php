@@ -22,8 +22,8 @@ if(isset($_POST["submit_picture"])) {
 }
 // Check if file already exists
 if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
+    echo "The file already exists, no need to upload it. ";
+   // $uploadOk = 0;
 }
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000) {
@@ -50,7 +50,7 @@ if ($uploadOk == 0) {
       
      $conn->close();
        
-      echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+      echo "You profile picture has been updated.";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }

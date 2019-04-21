@@ -6,7 +6,7 @@ $status;
 // Check if the user is already logged in, if yes then redirect him to welcome page
 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: index.php");
+    header("location: Dashboard.php");
     exit;
 }
 
@@ -159,6 +159,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Close connection
     mysqli_close($link);
+    $conn->close();
 }
 ?>
 
@@ -242,7 +243,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
         <!-- <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">-->
            <ul   class='subpage-navlist'>
-            <li><a   href='index.php'><?php echo $_SESSION['user_status']?></a></li>
+            <li><a   href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='Resources.php'>Resources</a></li>
             <li><a href='contactus.php'>Contact Us </a></li>

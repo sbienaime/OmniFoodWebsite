@@ -105,7 +105,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
        
         <tbody>
             <tr>
-                <td> Would you like to update your profile pic ? <input type="file" name="fileToUpload" id="fileToUpload"></td>
+                <td>Hi <?php echo $firstname; ?>, would you like to update your profile pic ? <input type="file" name="fileToUpload" id="fileToUpload"></td>
             </tr>
             <tr>
                 <td> <input type="submit" value="Upload New Image" name="submit"></td>

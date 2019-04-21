@@ -6,7 +6,13 @@ session_start();
 if($_SESSION['user_status']!=='yes'){
     header("location: denied.php");
     exit;
+    
 }
+
+
+
+                            
+
 ?>
 
 <!DOCTYPE HTML> 
@@ -70,12 +76,45 @@ if($_SESSION['user_status']!=='yes'){
         <div class="site_management_div">
         
               <H2>  Site Management </H2>
+              
+              <center> <form action="MaintenancePage.php" method="post" enctype="multipart/form-data">
+    <table border="0" width="auto" cellspacing="25%" padding='0'>
+       
+        <tbody>
+            <tr>
+                <td>Hi <?php echo $_SESSION['username']; ?>, would you like to make some changes to the site ? </td>
+            </tr>
+            <tr>
+            <td>Front Page Header Background </td>
+            </tr>
+            <tr>
+            <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="Upload New Image" name="submit_picture"></td>
+            </tr>
+            <tr><td align="center" ><label>  Mission Statement</label></td></tr>
+            <tr>
+            <td align="center">
+                   <textarea rows="8" cols="60" name="statement" id="statement" value=" " ></textarea>  </td>
+            </tr>
+           
+            
+           <tr>
+                <td align="center"> <input type="submit" name="submit" value="Update Mission">  </td>
+            </tr> 
+        </tbody>
+    </table>
+ </form></center>             
+              
+              
+              
         
-      <form  action="/action_page.php"  method="POST">
+       <!--<form  action="OfficerPortal.php"  method="POST">
        Mission Statement:<br>  
        <input type="text" name="statement"><br>
-       Front Page Image :<br>
-       <input type="text" name="firstname"><br><br>
+       Front Page Header Image :<br>
+       <input type="text" name="header_image"><br><br>
        <input type="submit" value="update">        <br> <br>
        News Feed
         <br><br>
@@ -84,13 +123,8 @@ if($_SESSION['user_status']!=='yes'){
         <option value="https://techcrunch.com">TECHCRUNCH.COM</option>
         <option value="https://cnet">CNET.COM</option>
         <option value="https://wired.com">WIRED.COM</option>
-        </select> 
-         
-          
-          
-          
-          
-      </form>
+        </select>    
+      </form>-->
           
      </div>  
         

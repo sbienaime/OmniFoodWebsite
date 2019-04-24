@@ -31,10 +31,10 @@
             <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='Resources.php'>Resources </a></li>
-            <li><a href='contactus.php'>Contact Us </a></li>
+            <li><a href='contact2.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
-            <li><a href='registration.php'>Registration</a></li>
-            <li><a href='login.php'>Sign In</a></li>
+            <li><a href='signup.php'>Registration</a></li>
+            <li><a href='logout.php'>Sign out</a></li>
            </ul>  
        </div>
     </nav>
@@ -42,11 +42,13 @@
      <div class='hero-text-box'> 
         <!-- <h1>Goodbye junk food.<br> Hello super healthy meals</h1>-->
          <a  class='btn btn-full' href='#'>Featured Project</a>
-         <a class='btn btn-ghost' href='#'>Log In</a>  
+         <a class='btn btn-ghost' href='login.php'>Log In</a>  
      </div> 
        
        
    </header>
+     
+     
    <section class="section-features js--section-features">
    
     <div>
@@ -165,23 +167,22 @@
         <div class="row">
         
         
-      <div class="col span-1-of-2">
+      <div class="col span-2-of-1">
            <!--this creates an unordered list inside of my navigation bar-->
             <ul class='footer-nav'>
                 <!-- these are the list items aka the navigation butons 
                 <!-- navigation buttons are links -->
 
                 <li><a href="index.php">Home</a></li> 
-                <li><a href="insert.php">Insert</a></li>
-                <li><a href="update.php">Update</a></li>
-                <li><a href="delete.php">Delete</a></li>                                                                                                          
-
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+                <li><a href="Resources.php">Resources</a></li>   
 
 
             </ul>
           
         </div>
-            <div class="col span-1-of-2">
+            <div class="col span-2-of-1">
                 <ul class="footer-links icons" >
                     
                     

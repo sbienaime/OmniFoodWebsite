@@ -67,10 +67,11 @@ $our_mission=$row['main_text'];
             <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='Resources.php'>Resources </a></li>
-            <li><a href='contactus.php'>Contact Us </a></li>
+            <li><a href='contact2.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
-            <li><a href='registration.php'>Registration</a></li>
+            <li><a href='signup.php'>Registration</a></li>
             <li><a href='login.php'>Sign In</a></li>
+            <li><a href='logout.php'>Sign out</a></li>
            </ul> 
        </div>
     </nav>
@@ -185,7 +186,7 @@ $our_mission=$row['main_text'];
     
 
 
- <footer class='thisfooter'>        
+<footer class='thisfooter'>        
       
         <div class="row">
         
@@ -197,9 +198,9 @@ $our_mission=$row['main_text'];
                 <!-- navigation buttons are links -->
 
                 <li><a href="index.php">Home</a></li> 
-                <li><a href="insert.php">Insert</a></li>
-                <li><a href="update.php">Update</a></li>
-                <li><a href="delete.php">Delete</a></li>                                                                                                          
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+                <li><a href="Resources.php">Resources</a></li>                                                                                                            
 
 
 
@@ -232,13 +233,21 @@ $our_mission=$row['main_text'];
             </div>
             
            
-        </footer>      
+        </footer>              
+              
 
 
     
 </body>  
     
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>       
+    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>   
+   
     
+    <!--keep our script last -->
+     <script src="resources/js/script.js"></script>   
     
     
     

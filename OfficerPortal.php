@@ -58,7 +58,7 @@ if($_SESSION['user_status']!=='yes'){
             <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='Resources.php'>Resources </a></li>
-            <li><a href='contactus.php'>Contact Us </a></li>
+            <li><a href='contact2.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
             <li><a href='signup.php'>Registration</a></li>
             <li><a href='login.php'>Sign In</a></li>
@@ -162,9 +162,9 @@ if($_SESSION['user_status']!=='yes'){
                 <!-- navigation buttons are links -->
 
                 <li><a href="index.php">Home</a></li> 
-                <li><a href="insert.php">Insert</a></li>
-                <li><a href="update.php">Update</a></li>
-                <li><a href="delete.php">Delete</a></li>                                                                                                          
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+                <li><a href="Resources.php">Resources</a></li>                                                                                                          
 
 
 

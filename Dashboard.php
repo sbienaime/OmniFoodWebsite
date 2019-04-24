@@ -80,9 +80,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='Resources.php'>Resources </a></li>
-            <li><a href='contactus.php'>Contact Us </a></li>
+            <li><a href='contact2.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
-            <li><a href='registration.php'>Registration</a></li>
+            <li><a href='signup.php'>Registration</a></li>
             <li><a href='OfficerPortal.php'>Officer Portal</a></li>
             <li><a href='logout.php'>Sign Out</a></li>
            </ul> 
@@ -142,9 +142,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <!-- navigation buttons are links -->
 
                 <li><a href="index.php">Home</a></li> 
-                <li><a href="insert.php">Insert</a></li>
-                <li><a href="update.php">Update</a></li>
-                <li><a href="delete.php">Delete</a></li>                                                                                                          
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+                <li><a href="Resources.php">Resources</a></li>                                                                                                          
 
 
 

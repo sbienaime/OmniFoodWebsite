@@ -42,10 +42,11 @@ session_start();
             <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='Resources.php'>Resources </a></li>
-            <li><a href='contactus.php'>Contact Us </a></li>
+            <li><a href='contact2.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
-            <li><a href='registration.php'>Registration</a></li>
+            <li><a href='signup.php'>Registration</a></li>
             <li><a href='login.php'>Sign In</a></li>
+            <li><a href='logout.php'>Sign out</a></li>
            </ul>  
        </div>
     </nav>
@@ -61,7 +62,7 @@ session_start();
 <div  class='profilesContainer' >
     <div><h2>POPULAR SITES FOR TUTORIALS</h2></div>
         <center> <div class='PresidentProfile'>     
-                <div class='presImg'> <img src='resources/img/youtube.png' width='60%' height='80%'>
+                <div class='presImg'> <a href="https:/youtube.com"><img src='resources/img/youtube.png' width='60%' height='80%'></a>
         
         </div>    
         
@@ -77,21 +78,21 @@ session_start();
  
         
         <center><div class='PresidentProfile'>     
-                <div class='presImg'> <img src='resources/img/freecodecamp.png' width='60%' height='80%'>
-        
+                <div class='presImg'> <a href="https:/freecodecamp.com"> <img src='resources/img/freecodecamp.png' width='60%' height='80%'>
+                    </a>
         </div>    
         <div class='presDesc'><p> Free Code Camp has tonnes of free  high quality material for developer. It's a valuable
             resource for coders at all levels.<p> </div> 
         </div></center> <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
-                <div class='presImg'> <img src='resources/img/udemy.png' width='60%' height='80%'>
+                <div class='presImg'> <a href="https:/udemy.com"> <img src='resources/img/udemy.png' width='60%' height='80%'> </a>
         </div>    
         <div class='presDesc'>  <p> description description description description <p> </div> 
               </div></center>  <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
-                <div class='presImg'> <img src='resources/img/w3schools.png' width='60%' height='80%'>
+                <div class='presImg'> <a href="https:/w3schools.com">  <img src='resources/img/w3schools.png' width='60%' height='80%'> </a>
         
         
          </div>    
@@ -100,7 +101,7 @@ session_start();
             </div></center>  <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
-                <div class='presImg'> <img src='resources/img/stackoverflow.png' width='60%' height='80%'>
+                <div class='presImg'><a href="https:/stackoverflow.com">  <img src='resources/img/stackoverflow.png' width='60%' height='80%'> </a>
         
         </div>    
       
@@ -108,7 +109,7 @@ session_start();
         </div></center>  <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
-                <div class='presImg'> <img src='resources/img/geeksforgeeks.png' width='60%' height='80%'>
+                <div class='presImg'> <a href="https:/geeksforgeeks.org"> <img src='resources/img/geeksforgeeks.png' width='60%' height='80%'></a>
        
         </div>    
         
@@ -176,7 +177,7 @@ session_start();
     
 
 
- <footer class='thisfooter'>        
+<footer class='thisfooter'>        
       
         <div class="row">
         
@@ -188,9 +189,9 @@ session_start();
                 <!-- navigation buttons are links -->
 
                 <li><a href="index.php">Home</a></li> 
-                <li><a href="insert.php">Insert</a></li>
-                <li><a href="update.php">Update</a></li>
-                <li><a href="delete.php">Delete</a></li>                                                                                                          
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+                <li><a href="Resources.php">Resources</a></li>                                                                                                           
 
 
 
@@ -223,15 +224,21 @@ session_start();
             </div>
             
            
-        </footer>      
-
+        </footer>              
+          
 
     
 </body>  
     
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>       
+   <!-- <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>   -->
+      
     
     
-    
+      <!--keep our script last -->
+     <script src="resources/js/script.js"></script>
     
     
     

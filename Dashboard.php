@@ -1,11 +1,16 @@
 <?php
 // Initialize the session
 session_start();
- 
+
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
+}
+else{
+    
+ $_SESSION['Login_Times']++;  
+    
 }
 ?>
 
@@ -71,18 +76,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
    
  
     
-<header class='subpageheader'>
-       <nav class='subpage-nav'>
+<header class='headersubPage'>
+       <nav>
        <div class='row'>
         <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
         <!-- <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">-->
-           <ul class="subpage-navlist">
+           <ul class="main-nav">
             <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='Resources.php'>Resources </a></li>
             <li><a href='contact2.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
-            <li><a href='signup.php'>Registration</a></li>
+           
             <li><a href='OfficerPortal.php'>Officer Portal</a></li>
             <li><a href='logout.php'>Sign Out</a></li>
            </ul> 
@@ -93,11 +98,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
 <section class='DashboardSection'>
 <div  class='DashboardContainer' >
-   <h2>PROFILE MANAGER</h2>
+   <h2>Your Profile </h2>
+  
         <center> <div class='PresidentProfile'>     
         <div class='presImg'> <img src='<?php echo $profile_img ?>' width='60%' height='80%'>
         <h4><?php echo $firstname.'  '.$lastname;?> </h4>
-        </div>    
+        </div> 
+         
+        <div id="mydiv"><p><?php  if (!empty($_SESSION['MESSAGE'])) {echo $_SESSION['MESSAGE'];}
+        
+        
+         $_SESSION['MESSAGE']= '';
+        
+        
+        ?> </p></div>
+         
+           
         </div></center>  <!-- end of presdiv -->
  
     <center> <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -110,13 +126,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <tr>
                 <td> <input type="submit" value="Upload New Image" name="submit"></td>
             </tr>
-            
-            <tr>
-                <td> Request name update: <input type="text" name="fullname" placeholder="enter new name here..." id="fileToUpload"></td>
-            </tr>
-            <tr>
-                <td> <input type="submit" value="Request name update" name="submit"></td>
-            </tr>
+           
+           
         </tbody>
     </table>
     </form></center>       
@@ -184,7 +195,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </body>  
     
     
+ <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>       
+   <!-- <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>   -->
+      
     
+    
+      <!--keep our script last -->
+       
+     <script src="resources/js/fade.js"></script>
+     <script src="resources/js/script.js"></script>    
     
     
     

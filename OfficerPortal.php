@@ -4,7 +4,9 @@ session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
 if($_SESSION['user_status']!=='yes'){
-    header("location: denied.php");
+     $_SESSION['MESSAGE']='Access denied, Only Officers can access the officer portal !!';
+    header("location: Dashboard.php");
+   
     exit;
     
 }
@@ -48,25 +50,25 @@ if($_SESSION['user_status']!=='yes'){
     
     
     <body>     
-    <header class='subpageheader'>
-      <nav class='subpage-nav'>
-         
-   
-        
-          <div class='row'>
-        <ul class="subpage-navlist">
+       
+<header class='headersubPage'>
+       <nav>
+       <div class='row'>
+        <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
+        <!-- <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">-->
+           <ul class="main-nav">
             <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='Resources.php'>Resources </a></li>
             <li><a href='contact2.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
-            <li><a href='signup.php'>Registration</a></li>
-            <li><a href='login.php'>Sign In</a></li>
-           </ul>  
+            <li><a href='OfficerPortal.php'>Officer Portal</a></li>
+            <li><a href='logout.php'>Sign Out</a></li>
+           </ul> 
        </div>
-     
     </nav>
-    </header> 
+       
+   </header>
         
         
         
@@ -93,6 +95,9 @@ if($_SESSION['user_status']!=='yes'){
             <tr>
                 <td> <input type="submit" value="Upload New Image" name="submit_picture"></td>
             </tr>
+            <tr><td align="center" ><label id="sitemsg"><?php echo $_SESSION['MESSAGE'];
+            $_SESSION['MESSAGE']='';
+            ?></label></td></tr>
             <tr><td align="center" ><label>  Mission Statement</label></td></tr>
             <tr>
             <td align="center">
@@ -208,7 +213,7 @@ if($_SESSION['user_status']!=='yes'){
     
     <!--keep our script last -->
      <script src="resources/js/script.js"></script>
-
+      <script src="resources/js/fade.js"></script>
 
          
     </body>

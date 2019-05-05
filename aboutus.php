@@ -58,25 +58,24 @@ $our_mission=$row['main_text'];
     
 <body>
     
-<header class='subpageheader'>
-       <nav class='subpage-nav'>
-       <div class='row'>
+     <header class='headersubPage'>
+       <nav>
+       <div class="row">
         <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
         <!-- <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">-->
-           <ul class="subpage-navlist">
+           <ul class="main-nav">
             <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='Resources.php'>Resources </a></li>
             <li><a href='contact2.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
             <li><a href='signup.php'>Registration</a></li>
-            <li><a href='login.php'>Sign In</a></li>
-            <li><a href='logout.php'>Sign out</a></li>
-           </ul> 
+           
+           </ul>  
        </div>
-    </nav>
-       
-   </header>
+    </nav>    
+                
+                </header>
     
 <section class='profileSection'>
     
@@ -103,15 +102,15 @@ $our_mission=$row['main_text'];
         <h4>Yehuda Joseph</h4>
         </div>    
         <div class='presTitle'><h4> Vice President </h4></div>
-        <div class='presDesc'><p> description description description description <p> </div> 
+        <div class='presDesc'><p> VP. Yehuda Has been serving for 5 years.<p> </div> 
         </div></center> <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
-        <div class='presImg'> <img src='<?php echo $background_img; ?>' width='60%' height='80%'>
+        <div class='presImg'> <img src='resources/img/prt7.jpg' width='60%' height='80%'>
         <h4> Carlos Mencia</h4>
         </div>    
         <div class='presTitle'><h4>Chief Operations Officer</h4></div>
-        <div class='presDesc'>  <p> description description description description <p> </div> 
+        <div class='presDesc'>  <p> Carlos was able to move up to the COO position rather quickly due to his hard work.<p> </div> 
               </div></center>  <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
@@ -120,7 +119,7 @@ $our_mission=$row['main_text'];
         
          <h4>Steve Bien-Aime</h4></div>    
         <div class='presTitle'><h4>Chief Technology Officer</h4></div>
-        <div class='presDesc'>  <p> description description description description <p> </div> 
+        <div class='presDesc'>  <p> Steve Bien-Aime has been instrumental in guiding the club/<p> </div> 
             </div></center>  <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
@@ -128,7 +127,7 @@ $our_mission=$row['main_text'];
          <h4> Alec Baldwin</h4>
         </div>    
         <div class='presTitle'><h4>Secretary</h4></div>
-        <div class='presDesc'><p> description description description description <p> </div> 
+        <div class='presDesc'><p> Alec is one of the most dedicated officers and has been with the club since it's inception. <p> </div> 
         </div></center>  <!-- end of presdiv -->
         
         <center> <div class='PresidentProfile'>     
@@ -136,7 +135,7 @@ $our_mission=$row['main_text'];
          <h4> Eriel Garcia</h4>
         </div>    
         <div class='presTitle'><h4>Chief Design Officer</h4></div>
-        <div class='presDesc'>  <p> description description description description <p> </div> 
+        <div class='presDesc'>  <p> Eriel is a new addition to the team. His creative eye is unmatched. <p> </div> 
             </div></center>  <!-- end of presdiv -->
         
      
@@ -243,7 +242,7 @@ $our_mission=$row['main_text'];
   <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="vendors/js/jquery.waypoints.min.js"></script>       
-    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>   
+    
    
     
     <!--keep our script last -->

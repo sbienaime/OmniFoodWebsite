@@ -6,7 +6,7 @@
     <BODY>
 
 <?php 
-
+session_start();
 function rename_win($oldfile,$newfile) {
     if (!rename($oldfile,$newfile)) {
         if (copy ($oldfile,$newfile)) {
@@ -19,8 +19,7 @@ function rename_win($oldfile,$newfile) {
 }
 require_once('config.php');
 
-ini_set('display_errors',1); error_reporting(E_ALL);
-session_start();
+
 
 if (isset($_POST['submit'])){
     
@@ -31,7 +30,7 @@ $conn->query($update);
 $conn->close();
 
 
- echo "<p>Update Successful</p>";
+  $_SESSION['MESSAGE']= "<p>Update Successful</p>";
 }
 
 
@@ -42,7 +41,7 @@ $conn->close();
      }*/
      
      
-  echo " The mission statement field is empty, please try again";    
+  $_SESSION['MESSAGE']=" The mission statement field is empty, please try again";    
      
 }
 
@@ -80,33 +79,33 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     if($check !== false) {
         
        
-        echo "File is an image - " . $check["mime"] . ".";
+        $_SESSION['MESSAGE']= "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
     } else {
-        echo "File is not an image.";
+      $_SESSION['MESSAGE']= "File is not an image.";
         $uploadOk = 0;
     }
 
 // Check if file already exists
 if (file_exists($target_file)) {
     //rename_win($target_file,$newfilename);
-    echo "The file already exists, no need to upload it. ";
+   $_SESSION['MESSAGE']= "The file already exists, no need to upload it. ";
     //$uploadOk = 0;
 }
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
+  $_SESSION['MESSAGE']= "Sorry, your file is too large.";
     $uploadOk = 0;
 }
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $_SESSION['MESSAGE']= "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     $uploadOk = 0;
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
+    $_SESSION['MESSAGE']= "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
     
@@ -118,11 +117,20 @@ if ($uploadOk == 0) {
       
      $conn->close();
        
-      echo "The site has been updated.";
+     $_SESSION['MESSAGE']= "The site has been updated.";
     } else {
-        echo "Sorry, there was an error uploading your file.";
+        $_SESSION['MESSAGE']="Sorry, there was an error uploading your file.";
     }
 }}
+
+
+
+
+ header("location: OfficerPortal.php");
+ exit;
+
+
+
 
 ?>
 

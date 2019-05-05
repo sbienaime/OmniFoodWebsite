@@ -1,7 +1,9 @@
 <!DOCTYPE html >
 <html lang="en">
    <head>
-    <?php     
+    <?php
+    session_start();
+     $_SESSION['Login_Times']=0;
       require_once("NewsFeedBackend.php");   
     ?>
     
@@ -34,14 +36,14 @@
             <li><a href='contact2.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
             <li><a href='signup.php'>Registration</a></li>
-            <li><a href='logout.php'>Sign out</a></li>
+          
            </ul>  
        </div>
     </nav>
        
      <div class='hero-text-box'> 
         <!-- <h1>Goodbye junk food.<br> Hello super healthy meals</h1>-->
-         <a  class='btn btn-full' href='#'>Featured Project</a>
+         <a  class='btn btn-full' href='#section-projects'>Featured Project</a>
          <a class='btn btn-ghost' href='login.php'>Log In</a>  
      </div> 
        
@@ -59,14 +61,14 @@
                        <div class="row">
                         <div class= "col span-1-of-4 box">
                             <?php echo " <img src ='".$images[0]."' width='100%' height='200px'>"; ?>
-                                <!--<ion-icon class="icon-big" name="infinite"></ion-icon>-->
+                               
                                 <h3><?php echo $titles[0]?></h3>
                                         <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.</p>
                     
                         </div>
                         <div class= "col span-1-of-4 box">
                              <?php echo " <img src ='".$images[1]."' width='100%' height='200px'>"; ?>
-                               <!-- <ion-icon class="icon-big" name="stopwatch"></ion-icon>-->
+                            
                                 <h3><?php echo $titles[1]?></h3>
                     
                                         <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
@@ -74,7 +76,7 @@
                         </div>
                          <div class= "col span-1-of-4 box">
                               <?php echo " <img src ='".$images[2]."' width='100%' height='200px'>"; ?>
-                                <!--<ion-icon class="icon-big" name="nutrition"></ion-icon>-->
+                              
                                 <h3><?php echo $titles[2]?></h3>
                     
                                         <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!</p>
@@ -82,7 +84,7 @@
                         </div>
                          <div class= "col span-1-of-4 box">
                               <?php echo " <img src ='".$images[3]."' width='100%' height='200px'>"; ?>
-                                <!--<ion-icon class="icon-big" name="cart"></ion-icon>-->
+                              
                                 <h3><?php echo $titles[3]?></h3>
                     
                                         <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!
@@ -98,33 +100,33 @@
   
     </section>
      
-<section class="section-meals">
+<section id="section-projects">
     <ul class="meals-showcase">
          <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/ftp1.jpg" alt="Korean bibimbap with egg and vegetables">
+               <img src="resources/img/ftp1.jpg" >
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/ftp2.jpg" alt="Simple italian pizza with cherry tomatoes">
+               <img src="resources/img/ftp2.jpg">
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/ftp3.jpg" alt="Chicken breast steak with vegetables">
+               <img src="resources/img/ftp3.jpg">
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/ftp4.jpg" alt=" Autumn pumpkin soup">
+               <img src="resources/img/ftp4.jpg" >
         
            </figure>
         </li>
@@ -133,28 +135,28 @@
        <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/ftp5.jpg" alt="Paleo beef steak with vegetables">
+               <img src="resources/img/ftp5.jpg" >
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/ftp6.jpg" alt="Healthy baguette with egg and vegetables">
+               <img src="resources/img/ftp6.jpg" >
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo">
         
-               <img src="resources/img/ftp7.jpg" alt="Chicken breast steak with vegetables">
+               <img src="resources/img/ftp7.jpg">
         
            </figure>
         </li>
         <li>
            <figure class="meal-photo  ">
         
-               <img src="resources/img/ftp8.jpg" alt="Granola with cherries and strawberries">
+               <img src="resources/img/ftp8.jpg" >
         
            </figure>
         </li>

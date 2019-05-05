@@ -34,24 +34,24 @@ session_start();
     
     
 <body>
-    
-<header class='subpageheader'>
-       <nav class='subpage-nav'>
-       <div class='row'>
-        <ul class="subpage-navlist">
+ <header class='headersubPage'>
+       <nav>
+       <div class="row">
+        <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
+        <!-- <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">-->
+           <ul class="main-nav">
             <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
             <li><a href='Resources.php'>Resources </a></li>
             <li><a href='contact2.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
             <li><a href='signup.php'>Registration</a></li>
-            <li><a href='login.php'>Sign In</a></li>
-            <li><a href='logout.php'>Sign out</a></li>
+           
            </ul>  
        </div>
-    </nav>
-       
-   </header>
+    </nav>    
+                
+                </header>
     
 <section class='ResourceSection'>
     

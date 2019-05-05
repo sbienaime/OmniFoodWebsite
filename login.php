@@ -183,92 +183,54 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
 <meta http-equiv="Content-Type" Content="text/html; charset=utf-8"/>
 <title>Log In Page</title>
+<link href="resources/css/style.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/_style.css" rel="stylesheet" type="text/css"/>
 <link href="https://fonts.googleis.com/css?family=Play" rel="stylesheet">
 
 
-<!--javascript validation-->
-<script>
-     
-    function validate(form)
-    {
-        fail = validateUsername(form.username.value);
-        fail += validatePassword(form.password.value);
-        
-        if(fail =="") return true
-        else{
-            alert(fail); return false
-        }
-    }
-    
-    function validateUsername(field) 
-    {
-        if(field =="")return "No username was entered.\n"
-        else if(field.length < 5)
-            return "Username must be atleast 5 characters.\n"
-        else if(field.length > 25)
-            return "Username cannot be more than 25 characters long.\n"
-        else if(/[^a-zA-Z0-9_-]/.test(field))
-            return "Only letters and numbers allowed in username.\n"
-        return ""
-        
-    }
-    
-    function validatePassword(field){
-        
-        if(field =="")return "No password was entered.\n"
-        else if(field.length < 5)
-            return "Username must be atleast 5 characters.\n"
-        else if(field.length > 25)
-            return "Username cannot be more than 25 characters long.\n"
-        else if(/[^a-zA-Z0-9_-]/.test(field))
-            return "Only letters and numbers allowed in username.\n"
-        return ""
-        
-    }
-    
-    
-    </script>
+
 
 
 </head>
 <body>
     
     
-    
-    <header>
-      
-        <nav class='subpage-nav'>
-       <div class='row'>
+     <header class='headersubPage'>
+       <nav>
+       <div class="row">
         <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
         <!-- <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">-->
-           <ul   class='subpage-navlist'>
-            <li><a   href='index.php'>Home</a></li>
+           <ul class="main-nav">
+            <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
-            <li><a href='Resources.php'>Resources</a></li>
+            <li><a href='Resources.php'>Resources </a></li>
             <li><a href='contact2.php'>Contact Us </a></li>
-            <li><a href='dashboard.php'>Dashboard</a></li>
+            <li><a href='Dashboard.php'>Dashboard</a></li>
             <li><a href='signup.php'>Registration</a></li>
-            <li><a href='logout.php'>Sign Out</a></li>
+          
            </ul>  
        </div>
-    </nav>
-
-   
-        
-        
-        </header>
+    </nav>    
+                
+                </header>
     <div class="loginbox">
         <h1>Login Here</h1>
-        <form action = "login.php" method ="POST" name = "loginform" id="loginform" onsubmit="return validate(this)">
-            <p>Username</p>
-            <input type="text" name="username" placeholder="Enter Username">
-            <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password">
-            <input type="submit" name="" value="Login">
-            <a href="#"> Lost your password?</a><br>
-            <a href="#">Don't have an account?</a>
-            <a href="#">Sign Up</a>
+        <form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method ="POST" name = "loginform" id="loginform" onsubmit="return validatelogin(this)">
+             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter Username" class="form-control" value="<?php echo $username; ?>">
+                <span class="help-block"><?php echo $username_err; ?></span>
+            </div> 
+             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter Password" class="form-control">
+                <span class="help-block"><?php echo $password_err; ?></span>
+            </div>
+             <div class="form-group">
+                <input type="submit"  class="btn btn-primary" value="Login">
+            </div>
+            <a href="signup.php">Don't have an account? Sign Up</a>
+         
         </form>
     </div>
     
@@ -305,8 +267,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             
            
-        </footer>   
-   
+        </footer>  
+    
+    <script type="text/javascript" src="validatelogin.js"></script>
 </body>
 <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

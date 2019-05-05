@@ -25,25 +25,25 @@
         
         <body>
             
-            <header>
-       <nav class='subpage-nav'>
-       <div class='row'>
+               <header class='headersubPage'>
+       <nav>
+       <div class="row">
         <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
         <!-- <img src="resources/img/logo.png" alt ="Omnifood logo" class="logo-black">-->
-           <ul class='subpage-navlist'>
+           <ul class="main-nav">
             <li><a href='index.php'>Home</a></li>
             <li><a href='aboutus.php'>About Us </a></li>
-            <li><a href='Resources.php'>Resources</a></li>
+            <li><a href='Resources.php'>Resources </a></li>
             <li><a href='contact2.php'>Contact Us </a></li>
+            <li><a href='Dashboard.php'>Dashboard</a></li>
             <li><a href='signup.php'>Registration</a></li>
-            <li><a href='login.php'>Sign In </a></li>
+           
            </ul>  
        </div>
-    </nav>
-                
+    </nav>    
                 
                 </header>
-                <div class="Container" style="background-color:white;"> 
+   <div class="Container" style="background-color:white;"> 
   <div class="contactText">
     <h2>Contact Us</h2>
     <p>Contact the Club:</p>
@@ -76,12 +76,27 @@
            
                       
             
-            <footer class='thisfooter'>        
+                    <footer class='thisfooter'>        
       
+        <div class="row">
         
         
-        
-      
+      <div class="col span-1-of-2">
+           <!--this creates an unordered list inside of my navigation bar-->
+            <ul class='footer-nav'>
+                <!-- these are the list items aka the navigation butons 
+                <!-- navigation buttons are links -->
+
+                <li><a href="index.php">Home</a></li> 
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+                <li><a href="Resources.php">Resources</a></li>                                                                                                          
+
+
+
+            </ul>
+          
+        </div>
             <div class="col span-1-of-2">
                 <ul class="footer-links icons" >
                     
@@ -95,7 +110,7 @@
                     
            </ul>
            </div>
-          
+           </div>
             
             
             

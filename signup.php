@@ -1,5 +1,4 @@
-<html>
- <?php
+<?php
 // Include config file
 require_once "config.php";
  
@@ -9,28 +8,10 @@ $username_err = $password_err = $confirm_password_err =$firstname_err = $lastnam
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    
-    
-    
-     // Validate firstname
-    if(empty(trim($_POST["firstname"]))){
-        $username_err = "Please enter a firstname.";
-    }
-    elseif(strlen(trim($_POST["firstname"])) < 15){
-    $password_err =" firstname cannnot exceed 15 characters.";}
-    else{
-      $firstname = trim($_POST["firstname"]);
-       }
+      
+   
        
-    //Validate lastname
-     if(empty(trim($_POST["lastname"]))){
-        $lastname_err = "Please enter a lastname.";
-    } 
-    elseif(strlen(trim($_POST["lastname"])) < 15){
-    $password_err = "Lastname cannnot exceed 15 characters.";}
-    else{
-      $lastname = trim($_POST["lasname"]);
-     }
+   
     
     // Validate username
     if(empty(trim($_POST["username"]))){
@@ -65,6 +46,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         mysqli_stmt_close($stmt);
     }
     
+      // Validate firstname
+    if(empty(trim($_POST["firstname"]))){
+        $firstname_err = "Please enter a firstname.";
+    }
+    else if(strlen(trim($_POST["firstname"])) > 15){
+    $firstname_err =" firstname cannnot exceed 15 characters.";}
+    else{
+      $firstname = trim($_POST["firstname"]);
+       }
+       
+      // Validate lastname
+    if(empty(trim($_POST["lastname"]))){
+        $lastname_err = "Please enter a lastname.";
+    }
+    else if(strlen(trim($_POST["lastname"])) > 15){
+    $lastname_err =" lastname cannnot exceed 15 characters.";}
+    else{
+      $lastname = trim($_POST["lastname"]);
+       }
+    
+    
     // Validate password
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";     
@@ -95,7 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username,$param_lastname,$param_firstname, $param_password);
+            mysqli_stmt_bind_param($stmt, "ssss", $param_username,$param_lastname,$param_firstname, $param_password);
             
             // Set parameters
             $param_firstname =$firstname;
@@ -109,7 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Redirect to login page
                 header("location: login.php");
             } else{
-                echo "Something went wrong. Please try again later.";
+               // echo "Something went wrong. Please try again later.";
             }
         }
          
@@ -122,64 +124,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>   
     
-    
-    
+<html>     
 <head>
 <meta http-equiv="Content-Type" Content="text/html; charset=utf-8"/>
 <title></title>
+
+<!-- grid.css makes a site  responsive -->
+<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 <link href="resources/css/registration.css" rel="stylesheet" type="text/css"/>
 <link href="https://fonts.googleis.com/css?family=Play" rel="stylesheet">
-    <style>
-        
-        #msg{
-            visibility: hidden;
-            min-width: 250px;
-            background-color: yellow;
-            color: #000;
-            text-align: center;
-            border-radius: 2px;
-            padding: 16px;
-            position: fixed;
-            z-index: 1;
-            right: 30%;
-            top: 30px;
-            font-size: 17px;
-            margin-right: 30px;
-        }   
-        
-        #msg.show{
-            visibility: visible;
-            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-            animation: fadein 0.5s, fadeout 0.5s 2.5s;
-        }
-        
-        @-webkit-keyframes fadein{
-            from{top: 0; opacity: 0;}
-            to {top: 30px; opacity: 1;}
-        }
-        
-        @keyframes fadein{
-            from{top: 0; opacity: 0;}
-            to {top: 30px; opacity: 1;}
-        }
-        
-        @-webkit-keyframes fadeout{
-            from{top: 30px; opacity: 1;}
-            to {top: 0px; opacity: 0;}
-        }
-        
-        @keyframes fadeout{
-            from{top: 30; opacity: 1;}
-            to {top: 0px; opacity: 0;}
-        }
-    </style>
+ <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+  
 </head>
 <body>
-    
-    
-    
-     <header class='headerFrontPage'>
+ <header class='headerFrontPage'>
        <nav>
        <div class="row">
         <!--<img src="resources/img/logo-white.png" alt ="Omnifood logo" class="logo">-->
@@ -191,35 +150,75 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <li><a href='contact2.php'>Contact Us </a></li>
             <li><a href='Dashboard.php'>Dashboard</a></li>
             <li><a href='signup.php'>Registration</a></li>
-            <li><a href='logout.php'>Sign out</a></li>
+            <li><a href='login.php'>Log In</a></li>
            </ul>  
        </div>
     </nav>
-         </header> 
+       
+        
+     </header>
+    
+    <div class="clearfix">
+    <div style="float: left;" class="clearfix"></div>
+    <!-- No Clearing div! -->
+</div> 
     <div class="signup">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"  onSubmit=" return validate(this)">
            <h2> Sign Up</h2>
            
-            <input type="text" name="username" placeholder="Username" value="<?php echo $username; ?>" >
-            <br><br>
-            <input type="text" name="firstname" placeholder="First name" value="<?php echo $firstname; ?>"  >
-            <br><br>
-            <input type="text" name="lastname" placeholder="Last name"value="<?php echo $lastname; ?>">
-            <br><br>
-            <input type="Password" name="pass" placeholder="Password" value="<?php echo $password; ?>">
-            <br><br>
-            <input type="text" name="confirm_password" placeholder="Confirm Password" value="<?php echo $confirm_password; ?>"   >
-            <br><br>
-            <input type="submit" value="Submit" > 
-            <br><br>
-            <div id="msg"> Congratulations you have sign up successfully!</div>
+            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" placeholder="Please enter your username" value="<?php echo $username; ?>">
+                <span class="help-block"><?php echo $username_err; ?></span>
+            </div>
+            
+            <div class="form-group <?php echo (!empty($firstname_err)) ? 'has-error' : ''; ?>">
+                <label>First name</label>
+                <input type="text" name="firstname" class="form-control" placeholder="Please enter your firstname"  value="<?php echo $firstname; ?>">
+                <span class="help-block"><?php echo $firstname_err; ?></span>
+            </div>
+           
+    
+            
+            <div class="form-group <?php echo (!empty($lastname_err)) ? 'has-error' : ''; ?>">
+                <label>Last name</label>
+                <input type="text" name="lastname" class="form-control"  placeholder="Please enter your lastname" value="<?php echo $lastname; ?>">
+                <span class="help-block"><?php echo $lastname_err; ?></span>
+            </div>
+       
+            
+            
+          <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Please enter your password" class="form-control" value="<?php echo $password; ?>">
+                <span class="help-block"><?php echo $password_err; ?></span>
+            </div>
+            
+    
+            
+            
+    
+             <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                <label> Confirm Password</label>
+                <input type="password" name="confirm_password" placeholder="Re-enter your password" class="form-control" value="<?php echo $confirm_password; ?>">
+                <span class="help-block"><?php echo $confirm_password_err; ?></span>
+            </div>
+            
+           <div class="form-group">
+           <input type="submit" class="btn btn-primary" value="Submit">
+          </div>
+        
+           
             
             
             
         </form>
     </div>
          
-         
+    <div class="clearfix">
+    <div style="float: left;" class="clearfix"></div>
+    <!-- No Clearing div! -->
+</div>    
          
          
           <footer class='thisfooter'>        
@@ -227,7 +226,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="row">
         
         
-      <div class="col span-2-of-1">
+      <div class="col span-1-of-2">
            <!--this creates an unordered list inside of my navigation bar-->
             <ul class='footer-nav'>
                 <!-- these are the list items aka the navigation butons 
@@ -243,7 +242,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </ul>
           
         </div>
-            <div class="col span-2-of-1">
+            <div class="col span-1-of-2">
                 <ul class="footer-links icons" >
                     
                     
@@ -272,18 +271,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </footer>              
           
             
-  <script type="text/javascript" src="validatelogin.js"></script> 
+ 
 </body>
 
-
+ <script type="text/javascript" src="validatelogin.js"></script> 
  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="vendors/js/jquery.waypoints.min.js"></script>       
-    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>   
+      
    
     
     <!--keep our script last -->
      <script src="resources/js/script.js"></script>
+    
     
 
 </html>

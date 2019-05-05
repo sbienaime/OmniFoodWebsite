@@ -9,7 +9,14 @@ function validate(form)
         else { alert(fail); return false }
       }
  
-
+function validatelogin(form)
+      {
+       
+        fail = validateUsername(form.username.value)
+        fail += validateloginPassword(form.password.value)
+        if (fail == "")     return true
+        else { alert(fail); return false }
+      }
 
 function validateUsername(field)
       {
@@ -33,6 +40,13 @@ function validatePassword(field)
         return ""
       }
 
+function validateloginPassword(field)
+      {
+        if (field == "") return "No Password was entered.\n"
+        else if (field.length < 6)
+          return "Passwords must be at least 6 characters.\n"
+      return ""
+      }
 
 
 

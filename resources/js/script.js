@@ -15,6 +15,10 @@ $(document).ready (function(){
                   })
                   
                   */
+                 
+                
+                 
+                 
     $('.js--section-features').waypoint(function(direction){
                                          
          if (direction == "down")    {
